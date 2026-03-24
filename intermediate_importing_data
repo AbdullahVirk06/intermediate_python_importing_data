@@ -55,3 +55,24 @@ df.iloc[:, 0].hist()
 plt.xlabel('fixed acidity (g(tartaric acid)/dm$^3$)')
 plt.ylabel('count')
 plt.show()
+
+################################################################
+
+# Import packages
+from urllib.request import urlopen, Request
+
+# Specify the url
+url = "https://campus.datacamp.com/courses/1606/4135?ex=2"
+
+# This packages the request: request
+request = Request(url)
+
+# Sends the request and catches the response: response
+response  = urlopen(request)
+
+# Print the datatype of response
+print(type(response))
+
+# Be polite and close the response!
+response.close()
+

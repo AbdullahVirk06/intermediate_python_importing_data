@@ -36,3 +36,12 @@ print(response.url)
 print(response.text)
 
 #############################
+
+# Perform a DELETE request to the playlist API using the path to playlist with PlaylistId 2
+requests.delete('http://localhost:3000/playlists/2')
+
+# Get the list of all existing playlists again
+response = requests.get('http://localhost:3000/playlists')
+print(response.text)
+
+###############################
